@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useIsIntersecting = (element?: HTMLElement | null) => {
+export const useIsIntersecting = (element?: HTMLElement | null, root?: HTMLElement | null) => {
     const [isIntersecting, setIsIntersecting] = useState<boolean>(true);
 
     useEffect(() => {
@@ -11,7 +11,7 @@ export const useIsIntersecting = (element?: HTMLElement | null) => {
 
         if (element){
             const options = {
-                root: null,
+                root: root,
                 rootMargin: "0px",
                 threshold: [0,1]
             }
