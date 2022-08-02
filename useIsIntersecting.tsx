@@ -25,8 +25,7 @@ export const useIsIntersecting = (element?: HTMLElement | null, root?: HTMLEleme
                 }
             })
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[element])
+    },[element, root])
 
     return isIntersecting;
 }
